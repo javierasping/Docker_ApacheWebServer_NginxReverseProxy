@@ -15,4 +15,7 @@ CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS   
 40501f759b4d   httpd:latest   "httpd-foreground"       5 minutes ago   Up 5 minutes   80/tcp    apache_web_server
 a8d7e27db6fc   nginx:latest   "/docker-entrypoint.…"   5 minutes ago   Up 5 minutes   80/tcp    nginx_rproxy
 javiercruces@5CD4342D0M:~/Docker_ApacheWebServer_NginxReverseProxy$
+
+javiercruces@5CD4342D0M:~/Docker_ApacheWebServer_NginxReverseProxy$ curl web.javiercd.es
+<h1>hola soy javier cruces</h1>
 ```
