@@ -19,3 +19,16 @@ javiercruces@5CD4342D0M:~/Docker_ApacheWebServer_NginxReverseProxy$
 javiercruces@5CD4342D0M:~/Docker_ApacheWebServer_NginxReverseProxy$ curl web.javiercd.es
 <h1>hola soy javier cruces</h1>
 ```
+
+## Tarea 2: Creación de Imágenes Personalizadas para Apache y Nginx usando Dockerfile
+A partir del ejercicio anterior, en el cual desplegaste un servidor web Apache detrás de un reverse proxy Nginx usando Docker Compose, ahora vas a crear tus propias imágenes Docker personalizadas para ambos servicios usando un Dockerfile, partiendo de una imagen base de Ubuntu.
+Detalles a tener en cuenta:
+Instalar además de apache o nginx: ca-certificates, openjdk-17-jre-headless, git, curl
+Debes asegurarte de incluir en el Dockerfile que se limpie el sistema después de instalar paquetes con apt-get.
+Debes crear un usuario sin privilegios junto a su directorio de trabajo y cambiar el usuario activo en el contenedor al usuario nuevo.
+
+## Tarea 3: Instalación de Harbor y Subida de Imágenes Personalizadas
+El objetivo de este ejercicio es instalar un registro Docker privado usando Harbor y luego subir las imágenes personalizadas de Apache y Nginx creadas en el ejercicio anterior.
+Detalles a tener en cuenta:
+Debes instalar Harbor con docker en un sistema operativo Linux o en el Subsistema de Windows para Linux (WSL).
+Sigue las instrucciones de la documentación oficial de Harbor para realizar la instalación utilizando Docker.
