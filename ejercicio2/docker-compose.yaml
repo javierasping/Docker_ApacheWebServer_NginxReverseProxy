@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  web_server:
+    container_name: apache_web_server
+    image: javierasping/myapache:v1
+    restart: always
+    depends_on:
+      - reverse_proxy
+
+  reverse_proxy:
+    container_name: nginx_proxy
+    restart: always
+    image: javierasping/nginx:v1

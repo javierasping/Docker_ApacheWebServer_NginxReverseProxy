@@ -27,6 +27,19 @@ Instalar además de apache o nginx: ca-certificates, openjdk-17-jre-headless, gi
 Debes asegurarte de incluir en el Dockerfile que se limpie el sistema después de instalar paquetes con apt-get.
 Debes crear un usuario sin privilegios junto a su directorio de trabajo y cambiar el usuario activo en el contenedor al usuario nuevo.
 
+```bash
+javiercruces@5CD4342D0M:~/Docker_ApacheWebServer_NginxReverseProxy/ejercicio2$ docker compose down && docker compose up -d
+
+javiercruces@5CD4342D0M:~/Docker_ApacheWebServer_NginxReverseProxy/ejercicio2$ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddres
+s}}{{end}}' nginx_proxy
+172.18.0.2
+
+javiercruces@5CD4342D0M:~/Docker_ApacheWebServer_NginxReverseProxy/ejercicio2$ echo "172.18.0.2 web.javiercd.es" | sudo tee -a /etc/hosts > /dev/null
+
+javiercruces@5CD4342D0M:~/Docker_ApacheWebServer_NginxReverseProxy/ejercicio2$ curl web.javiercd.es
+<h1>hola soy javier cruces :)</h1>
+```
+
 ## Tarea 3: Instalación de Harbor y Subida de Imágenes Personalizadas
 El objetivo de este ejercicio es instalar un registro Docker privado usando Harbor y luego subir las imágenes personalizadas de Apache y Nginx creadas en el ejercicio anterior.
 Detalles a tener en cuenta:
