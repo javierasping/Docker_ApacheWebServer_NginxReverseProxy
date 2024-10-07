@@ -28,6 +28,7 @@ Debes asegurarte de incluir en el Dockerfile que se limpie el sistema después d
 Debes crear un usuario sin privilegios junto a su directorio de trabajo y cambiar el usuario activo en el contenedor al usuario nuevo.
 
 ```bash
+javiercruces@5CD4342D0M:~/Docker_ApacheWebServer_NginxReverseProxy/ejercicio2/nginx$ docker build -t javierasping/nginx:v1 .
 javiercruces@5CD4342D0M:~/Docker_ApacheWebServer_NginxReverseProxy/ejercicio2$ docker compose down && docker compose up -d
 
 javiercruces@5CD4342D0M:~/Docker_ApacheWebServer_NginxReverseProxy/ejercicio2$ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddres
